@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TLF", "Tibia Low Framerate\TLF.csproj", "{AFCF6D05-1BB1-4BC1-8440-F2ADA0362081}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFCF6D05-1BB1-4BC1-8440-F2ADA0362081}.Debug|x86.ActiveCfg = Debug|x86
+		{AFCF6D05-1BB1-4BC1-8440-F2ADA0362081}.Debug|x86.Build.0 = Debug|x86
+		{AFCF6D05-1BB1-4BC1-8440-F2ADA0362081}.Release|x86.ActiveCfg = Release|x86
+		{AFCF6D05-1BB1-4BC1-8440-F2ADA0362081}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

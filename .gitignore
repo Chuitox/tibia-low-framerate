@@ -34,3 +34,13 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+*.exe
+*.pdb
+*.manifest
+*.resources
+*.Cache
+Tibia Low Framerate/obj/x86/Release/TLF.csproj.FileListAbsolute.txt
+Tibia Low Framerate/obj/x86/Release/TempPE/Properties.Resources.Designer.cs.dll
+Tibia Low Framerate/Resources/icon.png.backup
+Tibia Low Framerate/Resources/Read FPS.lua

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AFCF6D05-1BB1-4BC1-8440-F2ADA0362081}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TLF</RootNamespace>
+    <AssemblyName>TLF</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Client.cs" />
+    <Compile Include="Classes\ClientManager.cs" />
+    <Compile Include="Classes\Constants.cs" />
+    <Compile Include="Classes\Engine.cs" />
+    <Compile Include="Classes\Memory.cs" />
+    <Compile Include="Classes\Versions\Version1053.cs" />
+    <Compile Include="Classes\Versions\Version1022.cs" />
+    <Compile Include="Classes\Versions\Version1021.cs" />
+    <Compile Include="Classes\Versions\Version1020.cs" />
+    <Compile Include="Classes\Versions\Version1013.cs" />
+    <Compile Include="Classes\Versions\Version1012.cs" />
+    <Compile Include="Classes\Versions\Version1011.cs" />
+    <Compile Include="Classes\Versions\Version1010.cs" />
+    <Compile Include="Classes\Versions\Version1002.cs" />
+    <Compile Include="Classes\Versions\Version1001.cs" />
+    <Compile Include="Classes\Versions\Version1000.cs" />
+    <Compile Include="Classes\Versions\Version986.cs" />
+    <Compile Include="Classes\Versions\Version985.cs" />
+    <Compile Include="Classes\Versions\Version984.cs" />
+    <Compile Include="Classes\Versions\Version983.cs" />
+    <Compile Include="Classes\Versions\Version900.cs" />
+    <Compile Include="Classes\Versions\Version982.cs" />
+    <Compile Include="Classes\Versions\Version981.cs" />
+    <Compile Include="Classes\Versions\Version980.cs" />
+    <Compile Include="Classes\Versions\Version970.cs" />
+    <Compile Include="Classes\Versions\Version963.cs" />
+    <Compile Include="Classes\Versions\Version962.cs" />
+    <Compile Include="Classes\Versions\Version961.cs" />
+    <Compile Include="Classes\Versions\Version960.cs" />
+    <Compile Include="Classes\Versions\Version954.cs" />
+    <Compile Include="Classes\Versions\Version953.cs" />
+    <Compile Include="Classes\Versions\Version951.cs" />
+    <Compile Include="Classes\Versions\Version950.cs" />
+    <Compile Include="Classes\Versions\Version946.cs" />
+    <Compile Include="Classes\Versions\Version945.cs" />
+    <Compile Include="Classes\Versions\Version944.cs" />
+    <Compile Include="Classes\Versions\Version943.cs" />
+    <Compile Include="Classes\Versions\Version942.cs" />
+    <Compile Include="Classes\Versions\Version941.cs" />
+    <Compile Include="Classes\Versions\Version940.cs" />
+    <Compile Include="Classes\Versions\Version931.cs" />
+    <Compile Include="Classes\Versions\Version920.cs" />
+    <Compile Include="Classes\Versions\Version910.cs" />
+    <Compile Include="Classes\Versions\Version1030.cs" />
+    <Compile Include="Classes\Versions\Version1031.cs" />
+    <Compile Include="Classes\Versions\Version1032.cs" />
+    <Compile Include="Classes\Versions\Version1033.cs" />
+    <Compile Include="Classes\Versions\Version1034.cs" />
+    <Compile Include="Classes\Versions\Version1035.cs" />
+    <Compile Include="Classes\Versions\Version1036.cs" />
+    <Compile Include="Classes\Versions\Version1037.cs" />
+    <Compile Include="Classes\Versions\Version1038.cs" />
+    <Compile Include="Classes\Versions\Version1040.cs" />
+    <Compile Include="Classes\Versions\Version1052.cs" />
+    <Compile Include="Classes\Versions\Version1051.cs" />
+    <Compile Include="Classes\Versions\Version1050.cs" />
+    <Compile Include="Classes\Versions\Version1041.cs" />
+    <Compile Include="Classes\WinApi.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\Versions\VersionManager.cs" />
+    <Compile Include="Classes\Versions\Version1039.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
