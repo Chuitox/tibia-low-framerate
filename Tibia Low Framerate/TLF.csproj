@@ -49,6 +49,13 @@
     <Compile Include="Classes\Constants.cs" />
     <Compile Include="Classes\Engine.cs" />
     <Compile Include="Classes\Memory.cs" />
+    <Compile Include="Classes\Versions\Version1070.cs" />
+    <Compile Include="Classes\Versions\Version1064.cs" />
+    <Compile Include="Classes\Versions\Version1063.cs" />
+    <Compile Include="Classes\Versions\Version1062.cs" />
+    <Compile Include="Classes\Versions\Version1061.cs" />
+    <Compile Include="Classes\Versions\Version1060.cs" />
+    <Compile Include="Classes\Versions\Version1071.cs" />
     <Compile Include="Classes\Versions\Version1059.cs" />
     <Compile Include="Classes\Versions\Version1058.cs" />
     <Compile Include="Classes\Versions\Version1057.cs" />
