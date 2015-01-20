@@ -166,6 +166,8 @@ namespace TLF
                     return SetVersion1071(client);
                 case "10.7.2.0":
                     return SetVersion1072(client);
+                case "10.7.3.0":
+                    return SetVersion1073(client);
                 default:
                     throw new Exception(String.Format("Tibia {0} is not supported by TLF yet ;)", CurrentVersionString));
                     break;
