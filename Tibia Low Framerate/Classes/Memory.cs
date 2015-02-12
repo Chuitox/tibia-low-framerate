@@ -10,15 +10,15 @@ namespace TLF
     {
         public static string ReadTitle(Process process)
         {
-            string RemoveString = "Tibia - ";
-            int Index = process.MainWindowTitle.IndexOf(RemoveString);
+            var RemoveString = "Tibia - ";
+            var Index = process.MainWindowTitle.IndexOf(RemoveString);
             return (Index < 0) ? process.MainWindowTitle : process.MainWindowTitle.Remove(Index, RemoveString.Length);
         }
 
         public static Int32 ReadInt32(IntPtr hProcess, IntPtr dwAddress)
         {
-            byte[] buffer = new byte[4];
-            int bytesread;
+            var buffer = new byte[4];
+            var bytesread = 0;
 
             WinApi.ReadProcessMemory(hProcess, dwAddress, buffer, 4, out bytesread);
             return BitConverter.ToInt32(buffer, 0);
@@ -26,8 +26,8 @@ namespace TLF
 
         public static double ReadDouble(IntPtr hProcess, IntPtr dwAddress)
         {
-            byte[] buffer = new byte[8];
-            int bytesread;
+            var buffer = new byte[8];
+            var bytesread = 0;
 
             WinApi.ReadProcessMemory(hProcess, dwAddress, buffer, 8, out bytesread);
             return BitConverter.ToDouble(buffer, 0);

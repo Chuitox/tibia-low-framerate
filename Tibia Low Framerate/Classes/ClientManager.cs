@@ -12,11 +12,11 @@ namespace TLF
         {
             get
             {
-                List<Client> clients = new List<Client>();
-                foreach (Process p in Engine.Processes)
+                var clients = new List<Client>();
+                foreach (var p in Engine.Processes)
                 {
-                    FileVersionInfo VersionInfo = FileVersionInfo.GetVersionInfo(p.Modules[0].FileName);
-                    Client newClient = VersionManager.Set(VersionInfo.FileVersion, new Client(p));
+                    var VersionInfo = FileVersionInfo.GetVersionInfo(p.Modules[0].FileName);
+                    var newClient = VersionManager.Set(VersionInfo.FileVersion, new Client(p));
                     clients.Add(newClient);
                 }
                 return clients;

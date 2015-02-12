@@ -22,22 +22,22 @@ namespace TLF
 
         public void SetFramerate(double framerate)
         {
-            IntPtr processHandle = WinApi.OpenProcess(WinApi.PROCESS_ALL_ACCESS, false, this.Process.Id);
-            int baseFramerate = Memory.ReadInt32(processHandle, ((IntPtr)(this.Process.MainModule.BaseAddress.ToInt64() + this.FramerateBaseAddress)));
-            IntPtr memoryAddress = ((IntPtr)(baseFramerate + this.Offset));
+            var processHandle = WinApi.OpenProcess(WinApi.PROCESS_ALL_ACCESS, false, this.Process.Id);
+            var baseFramerate = Memory.ReadInt32(processHandle, ((IntPtr)(this.Process.MainModule.BaseAddress.ToInt64() + this.FramerateBaseAddress)));
+            var memoryAddress = ((IntPtr)(baseFramerate + this.Offset));
 
             framerate = ((int)(1000 / framerate));
-            byte[] array = BitConverter.GetBytes(framerate);
+            var array = BitConverter.GetBytes(framerate);
             UIntPtr bytesWritten;
             WinApi.WriteProcessMemory(processHandle, memoryAddress, array, (uint)array.Length, out bytesWritten);
         }
 
         public double GetFramerate()
         {
-            IntPtr processHandle = WinApi.OpenProcess(WinApi.PROCESS_ALL_ACCESS, false, this.Process.Id);
-            int baseFramerate = Memory.ReadInt32(processHandle, ((IntPtr)(this.Process.MainModule.BaseAddress.ToInt64() + this.FramerateBaseAddress)));
-            IntPtr memoryAddress = ((IntPtr)(baseFramerate + this.Offset));
-            double currentFramerate = Memory.ReadDouble(processHandle, memoryAddress);
+            var processHandle = WinApi.OpenProcess(WinApi.PROCESS_ALL_ACCESS, false, this.Process.Id);
+            var baseFramerate = Memory.ReadInt32(processHandle, ((IntPtr)(this.Process.MainModule.BaseAddress.ToInt64() + this.FramerateBaseAddress)));
+            var memoryAddress = ((IntPtr)(baseFramerate + this.Offset));
+            var currentFramerate = Memory.ReadDouble(processHandle, memoryAddress);
             return ((int)(1000 / currentFramerate));
         }
     }

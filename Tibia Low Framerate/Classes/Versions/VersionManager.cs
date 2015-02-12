@@ -8,21 +8,21 @@ namespace TLF
 {
     partial class VersionManager
     {
-        public static ushort CurrentVersion = 1074;
-        public static string CurrentVersionString = "10.74";
+        public static ushort CurrentVersion = 1075;
+        public static string CurrentVersionString = "10.75";
 
         public static string VersionToString(ushort version)
         {
-            int main = version / 100;
-            int secondary = version - main * 100;
+            var main = version / 100;
+            var secondary = version - main * 100;
             return String.Format("{0}.{1:00}", main, secondary);
         }
 
         public static ushort StringToVersion(string versionString)
         {
-            string[] split = versionString.Split('.');
-            int main = int.Parse(split[0]);
-            int secondary = int.Parse(split[1] + ((split.Length == 3) ? split[2] : String.Empty));
+            var split = versionString.Split('.');
+            var main = int.Parse(split[0]);
+            var secondary = int.Parse(split[1] + ((split.Length == 3) ? split[2] : String.Empty));
             return (ushort)(main * 100 + secondary);
         }
 
@@ -174,7 +174,6 @@ namespace TLF
                     return SetVersion1075(client);
                 default:
                     throw new Exception(String.Format("Tibia {0} is not supported by TLF yet ;)", CurrentVersionString));
-                    break;
             }
         }
     }

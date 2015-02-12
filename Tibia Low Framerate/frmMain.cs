@@ -56,8 +56,8 @@ namespace TLF
 
         private void btnUpdateAll_Click(object sender, EventArgs e)
         {
-            bool updated = false;
-            double newFPS = (double)nmrcFPS.Value;
+            var updated = false;
+            var newFPS = (double)nmrcFPS.Value;
             foreach (Client selectedItem in lstbxClients.Items)
             {
                 selectedItem.SetFramerate(newFPS);
@@ -100,7 +100,7 @@ namespace TLF
 
         private void btnResetAll_Click(object sender, EventArgs e)
         {
-            bool updated = false;
+            var updated = false;
             foreach (Client selectedItem in lstbxClients.Items)
             {
                 selectedItem.SetFramerate(Constants.DefaultFPS);
