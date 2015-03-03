@@ -8,8 +8,8 @@ namespace TLF
 {
     partial class VersionManager
     {
-        public static ushort CurrentVersion = 1075;
-        public static string CurrentVersionString = "10.75";
+        public static ushort CurrentVersion = 1076;
+        public static string CurrentVersionString = "10.76";
 
         public static string VersionToString(ushort version)
         {
