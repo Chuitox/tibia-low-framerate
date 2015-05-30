@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,6 +52,7 @@
     <Compile Include="Classes\Constants.cs" />
     <Compile Include="Classes\Engine.cs" />
     <Compile Include="Classes\Memory.cs" />
+    <Compile Include="Classes\Versions\Version1078.cs" />
     <Compile Include="Classes\Versions\Version1077.cs" />
     <Compile Include="Classes\Versions\Version1076.cs" />
     <Compile Include="Classes\Versions\Version1075.cs" />
@@ -156,6 +160,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.grpBox = new System.Windows.Forms.GroupBox();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.lblFPS = new System.Windows.Forms.Label();
@@ -177,6 +178,7 @@
             this.Controls.Add(this.btnUpdateSelection);
             this.Controls.Add(this.grpBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(395, 205);
             this.MinimumSize = new System.Drawing.Size(395, 205);
             this.Name = "frmMain";
