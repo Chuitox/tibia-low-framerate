@@ -52,6 +52,7 @@
     <Compile Include="Classes\Constants.cs" />
     <Compile Include="Classes\Engine.cs" />
     <Compile Include="Classes\Memory.cs" />
+    <Compile Include="Classes\Versions\Version1079.cs" />
     <Compile Include="Classes\Versions\Version1078.cs" />
     <Compile Include="Classes\Versions\Version1077.cs" />
     <Compile Include="Classes\Versions\Version1076.cs" />
@@ -133,7 +134,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Classes\Versions\VersionManager.cs" />
+    <Compile Include="Classes\VersionManager.cs" />
     <Compile Include="Classes\Versions\Version1039.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
