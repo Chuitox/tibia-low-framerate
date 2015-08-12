@@ -15,8 +15,8 @@ namespace TLF
                 var clients = new List<Client>();
                 foreach (var p in Engine.Processes)
                 {
-                    var VersionInfo = FileVersionInfo.GetVersionInfo(p.Modules[0].FileName);
-                    var newClient = VersionManager.Set(VersionInfo.FileVersion, new Client(p));
+                    var versionInfo = FileVersionInfo.GetVersionInfo(p.Modules[0].FileName);
+                    var newClient = VersionManager.Set(versionInfo.FileVersion, new Client(p));
                     clients.Add(newClient);
                 }
                 return clients;
