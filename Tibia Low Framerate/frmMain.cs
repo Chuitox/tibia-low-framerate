@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace TLF
 {
@@ -47,20 +41,22 @@ namespace TLF
 
         private void btnUpdateSelection_Click(object sender, EventArgs e)
         {
-            if (lstbxClients.SelectedIndex > -1)
+            if (lstbxClients.SelectedIndex <= -1)
             {
-                ((Client)lstbxClients.SelectedItem).SetFramerate((double)nmrcFPS.Value);
-                Reload();
+                return;
             }
+
+            ((Client)lstbxClients.SelectedItem).SetFramerate((double)nmrcFPS.Value);
+            Reload();
         }
 
         private void btnUpdateAll_Click(object sender, EventArgs e)
         {
             var updated = false;
-            var newFPS = (double)nmrcFPS.Value;
+            var newFps = (double)nmrcFPS.Value;
             foreach (Client selectedItem in lstbxClients.Items)
             {
-                selectedItem.SetFramerate(newFPS);
+                selectedItem.SetFramerate(newFps);
                 updated = true;
             }
             if (updated)
@@ -93,7 +89,7 @@ namespace TLF
         {
             if (lstbxClients.SelectedIndex > -1)
             {
-                ((Client)lstbxClients.SelectedItem).SetFramerate(Constants.DefaultFPS);
+                ((Client)lstbxClients.SelectedItem).SetFramerate(Constants.DefaultFps);
                 Reload();
             }
         }
@@ -103,7 +99,7 @@ namespace TLF
             var updated = false;
             foreach (Client selectedItem in lstbxClients.Items)
             {
-                selectedItem.SetFramerate(Constants.DefaultFPS);
+                selectedItem.SetFramerate(Constants.DefaultFps);
                 updated = true;
             }
             if (updated)

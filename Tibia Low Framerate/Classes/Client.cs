@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Diagnostics;
-using System.Windows.Forms;
 
 namespace TLF
 {
@@ -11,7 +7,7 @@ namespace TLF
     {
         public Client(Process process)
         {
-            this.Process = process;
+            Process = process;
         }
 
         public ushort Version { get; set; }
@@ -22,9 +18,9 @@ namespace TLF
 
         public void SetFramerate(double framerate)
         {
-            var processHandle = WinApi.OpenProcess(WinApi.PROCESS_ALL_ACCESS, false, this.Process.Id);
-            var baseFramerate = Memory.ReadInt32(processHandle, ((IntPtr)(this.Process.MainModule.BaseAddress.ToInt64() + this.FramerateBaseAddress)));
-            var memoryAddress = ((IntPtr)(baseFramerate + this.Offset));
+            var processHandle = WinApi.OpenProcess(WinApi.PROCESS_ALL_ACCESS, false, Process.Id);
+            var baseFramerate = Memory.ReadInt32(processHandle, ((IntPtr)(Process.MainModule.BaseAddress.ToInt64() + FramerateBaseAddress)));
+            var memoryAddress = ((IntPtr)(baseFramerate + Offset));
 
             framerate = ((int)(1000 / framerate));
             var array = BitConverter.GetBytes(framerate);
@@ -34,9 +30,9 @@ namespace TLF
 
         public double GetFramerate()
         {
-            var processHandle = WinApi.OpenProcess(WinApi.PROCESS_ALL_ACCESS, false, this.Process.Id);
-            var baseFramerate = Memory.ReadInt32(processHandle, ((IntPtr)(this.Process.MainModule.BaseAddress.ToInt64() + this.FramerateBaseAddress)));
-            var memoryAddress = ((IntPtr)(baseFramerate + this.Offset));
+            var processHandle = WinApi.OpenProcess(WinApi.PROCESS_ALL_ACCESS, false, Process.Id);
+            var baseFramerate = Memory.ReadInt32(processHandle, ((IntPtr)(Process.MainModule.BaseAddress.ToInt64() + FramerateBaseAddress)));
+            var memoryAddress = ((IntPtr)(baseFramerate + Offset));
             var currentFramerate = Memory.ReadDouble(processHandle, memoryAddress);
             return ((int)(1000 / currentFramerate));
         }
