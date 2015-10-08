@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Diagnostics;
 
 namespace TLF
 {
     partial class VersionManager
     {
-        public static ushort CurrentVersion = 1081;
-        public static string CurrentVersionString = "10.81";
+        public static ushort CurrentVersion = 1082;
+        public static string CurrentVersionString = "10.82";
 
         public static string VersionToString(ushort version)
         {
@@ -184,6 +180,8 @@ namespace TLF
                     return SetVersion1080(client);
                 case "10.8.1.0":
                     return SetVersion1081(client);
+                case "10.8.2.0":
+                    return SetVersion1082(client);
                 default:
                     throw new Exception(String.Format("Tibia {0} is not supported by TLF yet ;)", CurrentVersionString));
             }
