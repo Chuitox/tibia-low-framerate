@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace TLF
+﻿namespace TLF
 {
     partial class VersionManager
     {
@@ -15,7 +10,7 @@ namespace TLF
             client.Version = CurrentVersion;
 
             // Update text to be displayed
-            client.Text = String.Format("[10.77] {0} {1} fps", Memory.ReadTitle(client.Process), client.GetFramerate());
+            client.Text = string.Format("[10.77] {0} {1} fps", Memory.ReadTitle(client.Process), client.GetFramerate());
 
             return client;
         }
