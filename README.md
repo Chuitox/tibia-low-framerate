@@ -1,7 +1,7 @@
 # Tibia Low Framerate (TLF)
 Tibia Low Framerate or TLF is a tool to decrease the fps of Tibia clients below the official limit
 
-You can download the latest built [here](https://www.dropbox.com/s/87x3xzhbdbo6os9/TLF.png?dl=1)
+You can download the latest built [here](https://github.com/Chuitox/tibia-low-framerate/releases/latest)
 
 ## Disclaimer
 This application is not intended to be used on dynamic botting sessions but rather simple tasks like training or making runes. For these tasks it can be used completely AFK.
