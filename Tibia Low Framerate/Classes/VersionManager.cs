@@ -4,14 +4,14 @@ namespace TLF
 {
     partial class VersionManager
     {
-        public static ushort CurrentVersion = 1091;
-        public static string CurrentVersionString = "10.91";
+        public static ushort CurrentVersion = 1092;
+        public static string CurrentVersionString = "10.92";
 
         public static string VersionToString(ushort version)
         {
             var main = version / 100;
             var secondary = version - main * 100;
-            return string.Format("{0}.{1:00}", main, secondary);
+            return $"{main}.{secondary:00}";
         }
 
         public static ushort StringToVersion(string versionString)
@@ -186,8 +186,10 @@ namespace TLF
                     return SetVersion1090(client);
                 case "10.9.1.0":
                     return SetVersion1091(client);
+                case "10.9.2.0":
+                    return SetVersion1092(client);
                 default:
-                    throw new Exception(string.Format("Tibia {0} is not supported by TLF yet ;)", CurrentVersionString));
+                    throw new Exception($"Tibia {CurrentVersionString} is not supported by TLF yet ;)");
             }
         }
     }

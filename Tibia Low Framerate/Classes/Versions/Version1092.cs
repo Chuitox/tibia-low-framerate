@@ -2,15 +2,15 @@
 {
     partial class VersionManager
     {
-        public static Client SetVersion950(Client client)
+        public static Client SetVersion1092(Client client)
         {
             // Update instance
-            client.FramerateBaseAddress = 0x58C18C;
+            client.FramerateBaseAddress = 0x720748;
             client.Offset = 0x58;
             client.Version = CurrentVersion;
 
             // Update text to be displayed
-            client.Text = $"[9.50] {Memory.ReadTitle(client.Process)} {client.GetFramerate()} fps";
+            client.Text = $"[10.92] {Memory.ReadTitle(client.Process)} {client.GetFramerate()} fps";
 
             return client;
         }

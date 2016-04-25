@@ -10,7 +10,7 @@
             client.Version = CurrentVersion;
 
             // Update text to be displayed
-            client.Text = string.Format("[10.56] {0} {1} fps", Memory.ReadTitle(client.Process), client.GetFramerate());
+            client.Text = $"[10.56] {Memory.ReadTitle(client.Process)} {client.GetFramerate()} fps";
 
             return client;
         }
