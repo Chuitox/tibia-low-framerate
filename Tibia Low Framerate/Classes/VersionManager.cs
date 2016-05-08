@@ -4,8 +4,8 @@ namespace TLF
 {
     partial class VersionManager
     {
-        public static ushort CurrentVersion = 1092;
-        public static string CurrentVersionString = "10.92";
+        public static ushort CurrentVersion = 1093;
+        public static string CurrentVersionString = "10.93";
 
         public static string VersionToString(ushort version)
         {
@@ -188,6 +188,8 @@ namespace TLF
                     return SetVersion1091(client);
                 case "10.9.2.0":
                     return SetVersion1092(client);
+                case "10.9.3.0":
+                    return SetVersion1093(client);
                 default:
                     throw new Exception($"Tibia {CurrentVersionString} is not supported by TLF yet ;)");
             }
