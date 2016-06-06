@@ -23,7 +23,7 @@ I wouldn't be able to tell if Neobot used this technique when the client was bei
 It depends mostly on the scripts you are running with Xenobot but with graphics at 1 FPS the CPU usage fluctuates between 0 and 5%.
 
 ### Supported versions
-* Tibia 9.0 to Tibia 10.93
+* Tibia 9.0 to Tibia 10.94
 
 ### Unsupported versions
 * Tibia 9.52
