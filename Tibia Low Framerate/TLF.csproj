@@ -52,6 +52,7 @@
     <Compile Include="Classes\Constants.cs" />
     <Compile Include="Classes\Engine.cs" />
     <Compile Include="Classes\Memory.cs" />
+    <Compile Include="Classes\Versions\Version1094.cs" />
     <Compile Include="Classes\Versions\Version1093.cs" />
     <Compile Include="Classes\Versions\Version1092.cs" />
     <Compile Include="Classes\Versions\Version1091.cs" />
